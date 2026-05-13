@@ -16,10 +16,10 @@ set_input_delay -clock [get_clocks sys_clk] -min 1.3 [get_ports io_value2]
 set_input_delay -clock [get_clocks sys_clk] -max 4.0 [get_ports io_loadingValues]
 set_input_delay -clock [get_clocks sys_clk] -min 1.3 [get_ports io_loadingValues]
 
-set_output_delay -clock [get_clocks sys_clk] -max  1.5 [get ports io_outputGCD]
-set_output_delay -clock [get_clocks sys_clk] -min -0.5 [get ports io_outputGCD]
-set_output_delay -clock [get_clocks sys_clk] -max  1.5 [get ports io_outputValid]
-set_output_delay -clock [get_clocks sys_clk] -min -0.5 [get ports io_outputValid]
+set_output_delay -clock [get_clocks sys_clk] -max  1.5 [get_ports io_outputGCD]
+set_output_delay -clock [get_clocks sys_clk] -min -0.5 [get_ports io_outputGCD]
+set_output_delay -clock [get_clocks sys_clk] -max  1.5 [get_ports io_outputValid]
+set_output_delay -clock [get_clocks sys_clk] -min -0.5 [get_ports io_outputValid]
 
 set_false_path -from [get_ports reset]
 
