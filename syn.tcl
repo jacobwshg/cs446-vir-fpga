@@ -4,15 +4,16 @@
 # Define variables for easy configuration
 set project_name "gcd"
 set part         "xc7z020clg400-1"
-set src_dir i    "./src"
-set constr_dir   "./constr"
+set src_dir      "./src"
+set constr_dir   "./cons"
 
 # Create a new project
-create_project $project_name ./$project_name -part $part
+create_project -force $project_name ./$project_name -part $part
 
 # Add source and constraint files
-add_files [glob $src_dir/*.v]
-add_files -fileset constrs_1 [glob $constr_dir/*.xdc]
+#add_files [glob $src_dir/*.v]
+add_files -force [glob $src_dir/*.sv]
+add_files -force -fileset constrs_1 [glob $constr_dir/*.xdc]
 
 # Update compile order
 update_compile_order -fileset sources_1
