@@ -4,7 +4,7 @@
 # Define variables for easy configuration
 set project_name "gcd"
 set part         "xc7z020clg400-1"
-set src_dir      "./src"
+set src_dir      "../src"
 set constr_dir   "./cons"
 
 # Create a new project
