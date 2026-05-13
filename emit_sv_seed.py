@@ -10,19 +10,20 @@ if __name__ == "__main__":
 	pkg_name, cls_name = argv[ 1 ], argv[ 2 ]
 
 	lines = [ \
-		"\n", \
-		f"package { pkg_name }\n", \
-		"\n", \
-		"import circt.stage.ChiselStage\n", \
-		"\n", \
-		f"object { cls_name }V extends App\n", \
-		"{\n", \
-		"\tChiselStage.emitSystemVerilogFile(\n", \
-		f"\t\tnew { cls_name },\n", \
-		"\t\tArray( \"--target-dir\", \"generated\" ),\n", \
-		"\t\tArray( \"--strip-debug-info\" ),\n", \
-		"\t)\n", \
-		"}\n", \
+		"", 
+		f"package { pkg_name }", 
+		"", 
+		"import circt.stage.ChiselStage", 
+		"", 
+		f"object { cls_name }V extends App", 
+		"{", 
+		"\tChiselStage.emitSystemVerilogFile(", 
+		f"\t\tnew { cls_name },", 
+		"\t\tArray( \"--target-dir\", \"generated\" ),", 
+		"\t\tArray( \"--strip-debug-info\" ),", 
+		"\t)", 
+		"}",
+		"",
 	]
 
 	for l in lines:
